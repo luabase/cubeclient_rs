@@ -18,6 +18,8 @@ pub struct V1LoadRequestQuery {
     pub filters: Option<Vec<crate::models::V1LoadRequestQueryFilterItem>>,
     #[serde(rename = "renewQuery", skip_serializing_if = "Option::is_none")]
     pub renew_query: Option<bool>,
+    #[serde(rename = "forceNoCache", skip_serializing_if = "Option::is_none")]
+    pub force_no_cache: Option<bool>,
 }
 
 impl V1LoadRequestQuery {
@@ -31,7 +33,8 @@ impl V1LoadRequestQuery {
             limit: None,
             offset: None,
             filters: None,
-            renew_query: None,            
+            renew_query: None,
+            force_no_cache: None,
         }
     }
 }
