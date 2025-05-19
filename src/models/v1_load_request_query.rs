@@ -9,7 +9,7 @@ pub struct V1LoadRequestQuery {
     #[serde(rename = "timeDimensions", skip_serializing_if = "Option::is_none")]
     pub time_dimensions: Option<Vec<crate::models::V1LoadRequestQueryTimeDimension>>,
     #[serde(rename = "order", skip_serializing_if = "Option::is_none")]
-    pub order: Option<Vec<Vec<String>>>,
+    pub order: Option<serde_json::Value>,
     #[serde(rename = "limit", skip_serializing_if = "Option::is_none")]
     pub limit: Option<i32>,
     #[serde(rename = "offset", skip_serializing_if = "Option::is_none")]
